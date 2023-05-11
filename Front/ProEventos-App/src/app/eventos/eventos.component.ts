@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventosComponent implements OnInit {
 
+<<<<<<< HEAD
   public eventos: any = [];
   public eventosFiltrados : any =[];
 
@@ -33,6 +34,9 @@ export class EventosComponent implements OnInit {
     this.eventosFiltrados = this.filtroLista ? this.filtrarEventos(this.filtroLista) : this.eventos;
   }
 
+=======
+  public eventos: any;
+>>>>>>> f95937d16223ce584ff9f7fa8cc95cde9d55b7d3
 
   constructor(private http:HttpClient) { }
 
@@ -40,17 +44,24 @@ export class EventosComponent implements OnInit {
     this.getEventos();
   }
 
+<<<<<<< HEAD
   alterarImagem(){
     this.exibirImagem = !this.exibirImagem;
   }
+=======
+>>>>>>> f95937d16223ce584ff9f7fa8cc95cde9d55b7d3
 
 
   public getEventos():void{
     this.http.get('https://localhost:5001/api/eventos').subscribe(
+<<<<<<< HEAD
       response => {
         this.eventos =response;
         this.eventosFiltrados = this.eventos;
       },
+=======
+      response => this.eventos =response,
+>>>>>>> f95937d16223ce584ff9f7fa8cc95cde9d55b7d3
       error => console.log(error)
     );
   }
